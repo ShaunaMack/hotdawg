@@ -67,7 +67,7 @@
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 0px;
   }
   
 //   body {
@@ -79,40 +79,20 @@
 //  }
 
     /* Necessary for full page carousel*/
-    html,
-    body,
-    .view {
-      height: 100%;
-    }
 
-    /* Carousel*/
-    .carousel,
-    .carousel-item,
-    .carousel-item.active {
-      height: 100%;
-    }
-    .carousel-inner {
-      height: 100%;
-    }
-    .carousel-item:nth-child(1) {
-      background-image: url("https://mdbootstrap.com/img/Photos/Others/images/76.jpg");
-      background-repeat: no-repeat;
+    .carousel-item {
+      height: 100vh;
+      min-height: 350px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
-      background-position: center center;
+      transition: .1s;
     }
-    .carousel-item:nth-child(2) {
-      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/30.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    }
-    .carousel-item:nth-child(3) {
-      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20(10).jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    }
- 
+    
+
+
  .container{
     background-color: white;
     opacity: 90%;

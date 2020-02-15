@@ -39,11 +39,13 @@
     <%= @dog.dislikes %>
   </p>
 
+  <% if @dog.price %>
   <p>
-    <%= number_to_currency @dog.price %>
+    <%= number_to_currency @dog.price %> per day
+    <%= link_to "Rent now", new_order_path(dog_id: @dog.id), class:"btn btn-dark" %>
   </p>
-
-    <%= link_to 'Back', dogs_path %>
+  <% end %>
+    <%= link_to 'Back', dogs_path, class:"btn btn-dark" %>
   
   </div>
   </div>
