@@ -28,7 +28,7 @@ class DogsController < ApplicationController
   # POST /dogs.json
   def create
     @dog = Dog.new(dog_params)
-
+    @dog.picture.attach(params[:dog][:picture])
     respond_to do |format|
       if @dog.save
         format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
@@ -72,6 +72,6 @@ class DogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dog_params
-      params.require(:dog).permit(:name, :gender, :breed, :size, :age, :likes, :dislikes)
+      params.require(:dog).permit(:name, :gender, :breed, :size, :age, :likes, :dislikes, :picture)
     end
 end

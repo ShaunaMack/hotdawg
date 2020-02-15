@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hotdawg</title>
+    <title>Mans Best Wingman</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans+Condensed:300&display=swap');
+    </style>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -24,7 +27,7 @@
             document.getElementById("mySidenav").style.width = "0";
           }
       </script>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <% if notice %>
           <p class="notice"><%= notice %></p>
         <%end%>

@@ -3,36 +3,45 @@
 <p>
   <h1> <%= @dog.name %> the Wingman</h1>
 </p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <%= image_tag @dog.picture, class:'rounded float-left', width: 250 if @dog.picture.attached? %>
+    </div>
+  <div class="col">
+  <p>
+    <strong>Gender:</strong>
+    <%= @dog.gender %>
+  </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @dog.gender %>
-</p>
+  <p>
+    <strong>Breed:</strong>
+    <%= @dog.breed %>
+  </p>
 
-<p>
-  <strong>Breed:</strong>
-  <%= @dog.breed %>
-</p>
+  <p>
+    <strong>Size:</strong>
+    <%= @dog.size %>
+  </p>
 
-<p>
-  <strong>Size:</strong>
-  <%= @dog.size %>
-</p>
+  <p>
+    <strong>Age:</strong>
+    <%= @dog.age %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
-</p>
+  <p>
+    <strong>Likes:</strong>
+    <%= @dog.likes %>
+  </p>
 
-<p>
-  <strong>Likes:</strong>
-  <%= @dog.likes %>
-</p>
-
-<p>
-  <strong>Dislikes:</strong>
-  <%= @dog.dislikes %>
-</p>
-
-<%= link_to 'Edit', edit_dog_path(@dog) %> |
-<%= link_to 'Back', dogs_path %>
+  <p>
+    <strong>Dislikes:</strong>
+    <%= @dog.dislikes %>
+  </p>
+  <% if user_signed_in?%>
+    <%= link_to 'Edit', edit_dog_path(@dog) %> |
+    <%= link_to 'Back', dogs_path %>
+  <% end %>
+  </div>
+  </div>
+</div>

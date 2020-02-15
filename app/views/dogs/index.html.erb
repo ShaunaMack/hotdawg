@@ -15,13 +15,12 @@
   <tbody>
     <% @dogs.each do |dog| %>
       <tr>
-        <td><%= dog.name %></td>
+        <td><%= link_to "#{dog.name.capitalize}", dog_path(dog) %></td>
         <td><%= dog.gender %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.size %></td>
-        <td><%= link_to 'Show', dog %></td>
-        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Remove', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag dog.picture, class:'rounded float-left', width: 120  if dog.picture.attached? %></td>
+
       </tr>
     <% end %>
   </tbody>
