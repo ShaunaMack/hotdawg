@@ -85,6 +85,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def dog_params
-      params.require(:dog).permit(:name, :gender, :breed, :size, :age, :likes, :dislikes, :picture)
+      params.require(:dog).permit(:name, :gender, :breed, :size, :age, :likes, :dislikes, :picture, :price)
     end
 end
