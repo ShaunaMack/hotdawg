@@ -53,4 +53,24 @@
   
   </div>
   </div>
+
+  <div>
+ <h3>Reviews</h3>
+ <% if user_signed_in? %>
+        <%= link_to 'Add a review', new_review_path(dog: @dog), class:"btn btn-dark"%>
+      <% else %>
+        <%= link_to "Sign in to add a review!", new_user_registration_path, class:"btn btn-dark" %>
+      <% end %>
+
+ <p>Overall Rating: <%= @rating%> </p>
+
+ <%if @reviews%>
+   <%@reviews.each do |review|%>
+     <div>
+       <p class="rating"><%= "Rating: #{review.rating}"%></p>
+       <p><%= review.user.email%>: <%= review.comment %></p>
+     </div>
+   <%end%>
+ <%end%>
+</div>
 </div>

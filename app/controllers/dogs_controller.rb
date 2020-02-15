@@ -13,6 +13,8 @@ class DogsController < ApplicationController
   # GET /dogs/1
   # GET /dogs/1.json
   def show
+    @reviews = @dog.reviews
+    @rating = Review.get_average_rating(@dog)
   end
 
   # GET /dogs/new

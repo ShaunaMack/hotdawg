@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :my_lists
   has_many :dogs, through: :my_lists
+  has_many :reviews
 end

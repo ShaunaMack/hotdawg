@@ -1,4 +1,4 @@
-<h1>My Wingman List</h1>
+<h1>My Wingman List:</h1>
 <div class="row justify-content-end">
   <p><%= link_to 'Add Dog', new_dog_path, class:"btn btn-dark" %>
 </div>
@@ -6,12 +6,18 @@
 <%if @dogs%>
  <%@dogs.each do |dog|%>
  <div class="row">
-  <div class ="col">
-   <h4><%=link_to dog.name, dog_path(dog)%></h4>
-   <p><%= link_to 'Edit Dog', edit_dog_path(dog), class:"btn btn-dark" %></p>
-   <p><%= link_to 'Remove Dog', dog, method: "delete", class:"btn btn-dark" %></p>
+    <div class ="col-2">
+    </div>
+    <div class="col-4">
+        <h4><%=link_to dog.name, dog_path(dog)%></h4>
+        <p><%= link_to 'Edit Dog', edit_dog_path(dog), class:"btn btn-dark" %></p>
+        <p><%= link_to 'Remove Dog', dog, method: "delete", class:"btn btn-dark" %></p>
+   </div>
+   <div class="col-6">
+        <%= image_tag dog.picture, class:'rounded float-left', width: 120 if dog.picture.attached? %>
+   </div>
   </div>
- </div>
+ 
  <%end%>
   
 <%end%>

@@ -5,5 +5,6 @@ class Dog < ApplicationRecord
 
     has_one_attached :picture
     has_many :my_lists
+    has_many :reviews
     
 end

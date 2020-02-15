@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
   get "/orders/complete", to:"orders#complete", as: "complete_order"
   
-
+  get "/reviews/new", to: "reviews#new", as: "new_review"
+  post "/reviews/", to: "reviews#create"
 end
