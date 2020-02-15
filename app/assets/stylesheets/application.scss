@@ -13,6 +13,8 @@
  */
  @import "bootstrap";
 
+  .active 
+
  .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -23,7 +25,7 @@
     color: white;
     background-color: #ff7757;  /* Coral - ff7757, originally Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   
@@ -59,6 +61,10 @@
     .nav-item {
         color: white;
     }
+
+    footer.page-footer {
+      background-color: #667490;
+    }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
@@ -73,6 +79,41 @@
 //     background-position: right bottom;
 //     background-attachment: fixed;
 //  }
+
+    /* Necessary for full page carousel*/
+    html,
+    body,
+    .view {
+      height: 100%;
+    }
+
+    /* Carousel*/
+    .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100%;
+    }
+    .carousel-inner {
+      height: 100%;
+    }
+    .carousel-item:nth-child(1) {
+      background-image: url("https://mdbootstrap.com/img/Photos/Others/images/76.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .carousel-item:nth-child(2) {
+      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/30.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .carousel-item:nth-child(3) {
+      background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20(10).jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
  
  .container{
     background-color: white;

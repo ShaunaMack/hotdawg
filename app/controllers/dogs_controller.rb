@@ -29,6 +29,7 @@ class DogsController < ApplicationController
   def create
     @dog = Dog.new(dog_params)
     @dog.picture.attach(params[:dog][:picture])
+    MyList.create_my_list(current_user, @dog)
     respond_to do |format|
       if @dog.save
         format.html { redirect_to @dog, notice: 'Dog was successfully created.' }
@@ -39,6 +40,18 @@ class DogsController < ApplicationController
       end
     end
   end
+
+  def add
+    dog = Dog.find(params[:id])
+    current_user.dogs.push(dog)
+    if current_user.save
+        flash[:notice] = "Added new dog"
+        redirect_to My_list__path
+    else
+        flash[:alert] = "Oops! There was a problem adding that dog"
+        redirect_back(fallback_location: books_path)
+    end
+end
 
   # PATCH/PUT /dogs/1
   # PATCH/PUT /dogs/1.json

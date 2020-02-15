@@ -1,0 +1,9 @@
+<h1>Update trading <%=@my_list.dog.name%></h1>
+
+<%=form_with model: @book_list_item do |form|%>
+<p>
+   <%=form.check_box :for_trade, value: @book_list_item.for_trade%>
+   <%= label :for_trade, "Willing to trade"%>
+</p>
+<%=form.submit 'Update', class:"btn btn-info" %>
+<%end%>

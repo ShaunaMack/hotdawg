@@ -20,7 +20,6 @@
         <td><%= dog.breed %></td>
         <td><%= dog.size %></td>
         <td><%= image_tag dog.picture, class:'rounded float-left', width: 120  if dog.picture.attached? %></td>
-
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Dog', new_dog_path %>
+

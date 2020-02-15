@@ -5,4 +5,10 @@ Rails.application.routes.draw do
 
   get "/", to: "dogs#welcome", as: "root"
 
+  #display my list of dogs
+  get "/mylist", to: "my_lists#index", as: "my_list"
+ 
+ 
+  
+
 end
