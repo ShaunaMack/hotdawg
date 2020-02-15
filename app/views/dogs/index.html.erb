@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Dogs</h1>
 
@@ -9,9 +8,6 @@
       <th>Gender</th>
       <th>Breed</th>
       <th>Size</th>
-      <th>Age</th>
-      <th>Likes</th>
-      <th>Dislikes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,9 +19,6 @@
         <td><%= dog.gender %></td>
         <td><%= dog.breed %></td>
         <td><%= dog.size %></td>
-        <td><%= dog.age %></td>
-        <td><%= dog.likes %></td>
-        <td><%= dog.dislikes %></td>
         <td><%= link_to 'Show', dog %></td>
         <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
         <td><%= link_to 'Remove', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>

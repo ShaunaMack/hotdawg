@@ -1,3 +1,4 @@
+<div class="row">
 <%= form_with(model: dog, local: true) do |form| %>
   <% if dog.errors.any? %>
     <div id="error_explanation">
@@ -50,3 +51,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>

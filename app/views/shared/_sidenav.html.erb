@@ -1,0 +1,11 @@
+<div id="mySidenav" class="sidenav">
+  <span class="opennav" onclick="openNav()"></span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h4>Menu</h4>
+    <% if user_signed_in? %>
+        <p class="btn"><%= link_to 'My Dog List', root_path %></p>
+    <% end %>
+    <p class="btn"><%= link_to 'Home', root_path %></p>
+    <p class="btn"><%= link_to 'View All', dogs_path %></p>
+
+</div>

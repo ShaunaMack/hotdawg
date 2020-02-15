@@ -10,6 +10,35 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+    <header class="top-nav row align-items-end bg-light">
+      <%= render "shared/topnav" %>
+      <%= render "shared/sidenav" %>
+    </header>
+      
+       <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+      </script>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <%end%>
+        <%if alert%>
+        <p class="alert"><%= alert %></p>
+        <% end %>
+         <div id="main">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div> 
+  </body> 
 </html>
