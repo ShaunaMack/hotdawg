@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "/mylist", to: "my_lists#index", as: "my_list"
  
   get "/orders", to: "orders#new", as: "new_order"
+
+  get "/orders/complete", to:"orders#complete", as: "complete_order"
   
 
 end

@@ -13,6 +13,9 @@
  */
  @import "bootstrap";
 
+
+
+
  .sidenav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -78,19 +81,6 @@
 //     background-attachment: fixed;
 //  }
 
-    /* Necessary for full page carousel*/
-
-    .carousel-item {
-      height: 100vh;
-      min-height: 350px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      transition: .1s;
-    }
-    
 
 
  .container{
@@ -103,7 +93,24 @@
  }
 
 
+ .full {
+    min-height: 100vh;
+    background-image: url(image_path('dogs-12.jpg'));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
 
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {

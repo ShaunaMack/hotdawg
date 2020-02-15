@@ -42,7 +42,11 @@
   <% if @dog.price %>
   <p>
     <%= number_to_currency @dog.price %> per day
-    <%= link_to "Rent now", new_order_path(dog_id: @dog.id), class:"btn btn-dark" %>
+      <% if user_signed_in? %>
+        <%= link_to "Rent now", new_order_path(dog_id: @dog.id), class:"btn btn-dark" %>
+      <% else %>
+        <%= link_to "Sign in to rent me!", new_user_registration_path, class:"btn btn-dark" %>
+      <% end %>
   </p>
   <% end %>
     <%= link_to 'Back', dogs_path, class:"btn btn-dark" %>
